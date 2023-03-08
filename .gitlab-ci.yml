@@ -1,0 +1,50 @@
+image: alpine:latest
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules
+
+# Variable
+.dev: &dev_vars
+  variables:
+    ENVIRONMENT: dev
+
+# Build Job
+prepare environment:
+  tags:
+    - ci
+  stage: .pre
+  only:
+    - develop
+  before_script:
+    - dir "C:\Users\Administrator\AppData\Roaming\npm"
+    - '$env:Path += ";C:\Users\Administrator\AppData\Roaming\npm"'
+    - '$env:Path += ";C:\Windows\System32"'
+  script:
+    - yarn install
+
+build:
+  tags:
+    - ci
+  only:
+    - develop
+  stage: build
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      - public
+
+deploy:
+  tags:
+    - ci
+  only:
+    - develop
+  stage: deploy
+  script:
+    - ./deploy.ps1
+# End build job

@@ -1,0 +1,38 @@
+.ant-checkbox {
+  $root: &;
+
+  &-wrapper {
+    &-disabled {
+      opacity: 0.3;
+
+      #{$root}-inner {
+        border: 2px solid var(--color-science-blue) !important;
+      }
+    }
+
+    #{$root}-inner {
+      border: 2px solid var(--color-science-blue);
+    }
+
+    #{$root}-checked {
+      *:after {
+        left: 20%;
+        top: 5px;
+      }
+
+      #{$root}-inner {
+        border: 2px solid var(--color-congress-blue);
+        background: var(--color-congress-blue);
+      }
+    }
+
+    span:not(.font-icon) {
+      @include typo("body", "regular");
+      color: var(--color-mine-shaft);
+    }
+
+    .font-icon {
+      margin-right: 4px;
+    }
+  }
+}

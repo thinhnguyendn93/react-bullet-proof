@@ -1,0 +1,38 @@
+.ant-input-number {
+  width: 100%;
+  border-radius: 6px;
+  padding: 2px;
+  border: 1px solid var(--color-alto);
+  background-color: var(--color-white);
+
+  &:hover {
+    border-color: var(--color-science-blue);
+  }
+
+  &-handler-wrap {
+    border-radius: 6px;
+  }
+
+  &-focused {
+    border: 1px solid var(--color-science-blue);
+    box-shadow: 0 0 0 4px var(--color-science-blue-100);
+  }
+
+  &-disabled {
+    background-color: var(--color-white);
+    opacity: 0.3;
+
+    &:hover {
+      border: 1px solid var(--color-alto);
+    }
+  }
+
+  &-sm {
+    padding: 2px;
+  }
+
+  &-input {
+    @include typo("body", "regular");
+    height: 26px;
+  }
+}

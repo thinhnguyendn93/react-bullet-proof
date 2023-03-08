@@ -1,0 +1,16 @@
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    font-weight: $weight;
+    font-style: $style;
+    src: url("/assets/fonts/" + $file-name + ".eot") format("embedded-opentype");
+    src: url("/assets/fonts/" + $file-name + ".ttf") format("truetype"), url("/assets/fonts/" + $file-name + ".woff") format("woff");
+  }
+}
+
+@mixin font-icon($icon-name, $size: 16px, $style: normal) {
+  content: map-get($icons, $icon-name);
+  font-family: quote("font-icons");
+  font-style: $style;
+  font-size: $size;
+}

@@ -1,0 +1,12 @@
+.days-checkbox {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+
+  &--wrap {
+    flex-wrap: wrap;
+    gap: 8px;
+    column-gap: 32px;
+    height: 132px;
+  }
+}

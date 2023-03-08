@@ -1,0 +1,113 @@
+@mixin button-hover($hover) {
+  &:hover,
+  &:focus {
+    color: map-get($hover, "color");
+    border: map-get($hover, "border");
+    background: map-get($hover, "background");
+    background-color: map-get($hover, "background-color");
+  }
+}
+
+@mixin button-pressed($pressed) {
+  &:active {
+    color: map-get($pressed, "color");
+    border: map-get($pressed, "border");
+    background: map-get($pressed, "background");
+    background-color: map-get($pressed, "background-color");
+  }
+}
+
+@mixin button-disabled($disabled) {
+  &:disabled {
+    color: map-get($disabled, "color");
+    border: map-get($disabled, "border");
+    background: map-get($disabled, "background");
+    background-color: map-get($disabled, "background-color");
+    opacity: map-get($disabled, "opacity");
+    $hover: map-get($disabled, "hover");
+
+    @if $hover != null {
+      @include button-hover($hover);
+    }
+  }
+}
+
+@mixin button-circle($circle, $root) {
+  &#{$root}--circle {
+    color: map-get($circle, "color");
+    border: map-get($circle, "border");
+    background: map-get($circle, "background");
+    background-color: map-get($circle, "background-color");
+    $hover: map-get($circle, "hover");
+    $disabled: map-get($circle, "disabled");
+
+    @if $hover != null {
+      @include button-hover($hover);
+    }
+
+    @if $disabled != null {
+      @include button-disabled($disabled);
+    }
+  }
+}
+
+@mixin button-variant($type, $variant, $root) {
+  &#{$root}--#{$type} {
+    color: map-get($variant, "color");
+    border: map-get($variant, "border");
+    background: map-get($variant, "background");
+    background-color: map-get($variant, "background-color");
+    $pressed: map-get($variant, "pressed");
+    $disabled: map-get($variant, "disabled");
+    $hover: map-get($variant, "hover");
+
+    @if $pressed != null {
+      @include button-pressed($pressed);
+    }
+
+    @if $disabled != null {
+      @include button-disabled($disabled);
+    }
+
+    @if $hover != null {
+      @include button-hover($hover);
+    }
+  }
+}
+
+@mixin button-type($type-map, $root) {
+  color: map-get($type-map, "color");
+  border: map-get($type-map, "border");
+  background: map-get($type-map, "background");
+  background-color: map-get($type-map, "background-color");
+  $hover: map-get($type-map, "hover");
+  $pressed: map-get($type-map, "pressed");
+  $disabled: map-get($type-map, "disabled");
+  $circle: map-get($type-map, "circle");
+  $danger: map-get($type-map, "danger");
+  $success: map-get($type-map, "success");
+
+  @if $hover != null {
+    @include button-hover($hover);
+  }
+
+  @if $pressed != null {
+    @include button-pressed($pressed);
+  }
+
+  @if $disabled != null {
+    @include button-disabled($disabled);
+  }
+
+  @if $circle != null {
+    @include button-circle($circle, $root);
+  }
+
+  @if $danger != null {
+    @include button-variant("danger", $danger, $root);
+  }
+
+  @if $success != null {
+    @include button-variant("success", $success, $root);
+  }
+}

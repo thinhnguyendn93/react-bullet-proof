@@ -1,0 +1,111 @@
+.ant-upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.ant-upload-drag {
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    .ant-upload-btn {
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    background-color: var(--color-alabaster);
+    border: 2px dashed var(--color-alto);
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &--has-error {
+      border: 1px solid var(--color-thunderbird);
+    }
+
+    .loading {
+      position: absolute;
+      left: 0;
+      z-index: 9;
+
+      &__loader:after {
+        background-color: var(--color-alabaster);
+        opacity: 0.5;
+      }
+    }
+
+    & > span {
+      width: 100%;
+    }
+
+    .ant-upload-list-text {
+      .ant-upload-list-item-name {
+        @include typo("body", "medium");
+        color: var(--color-black);
+        padding: 0 4px;
+      }
+
+      .ant-upload-list-item-card-actions-btn {
+        width: fit-content;
+        opacity: 1;
+      }
+    }
+
+    .ant-upload-list-item {
+      margin: 0;
+
+      &:hover {
+        .ant-upload-list-item-info {
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  &__text {
+    @include typo("body", "regular");
+    color: var(--color-black);
+
+    &--highlight {
+      color: var(--color-science-blue);
+    }
+  }
+
+  &__hint {
+    @include typo("body", "regular");
+    color: var(--color-tundora-100);
+    padding-top: 8px;
+  }
+
+  &__item-action {
+    @include typo("body", "regular");
+    color: var(--color-dove-gray-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &--uploaded,
+  &-drag-uploading {
+    display: none;
+  }
+}
+
+.ant-upload-list-item-progress {
+  display: none;
+}
+
+.ant-form-item-has-error {
+  .ant-upload-list-text {
+    .ant-upload-list-item-name {
+      color: var(--color-thunderbird);
+    }
+  }
+}

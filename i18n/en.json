@@ -1,0 +1,19 @@
+{
+  "home": "Home",
+  "get_in_touch": "Get in touch",
+  "copy_right": "Copyright © {{year}} source-base. All rights reserved.",
+  "full_name": "Full name",
+  "full_name_placeholder": "Enter full name",
+  "phone_number_placeholder": "Enter phone number",
+  "phone_number": "Phone number",
+  "message": "Message",
+  "message_placeholder": "Enter your message",
+  "submit": "Submit",
+  "email_placeholder": "Enter your email",
+  "successfully": "Successfully",
+  "full_name_is_required": "Full name is required",
+  "email_is_required": "Email is required",
+  "phone_number_is_required": "Phone number is required",
+  "message_is_required": "Message is required",
+  "contact_us": "Contact us"
+}

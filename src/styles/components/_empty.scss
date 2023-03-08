@@ -1,0 +1,26 @@
+.ant-empty {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__description {
+    @include typo("body", "semi-bold");
+    margin-bottom: 4px;
+    color: var(--color-tundora-100);
+  }
+
+  &__sub-description {
+    @include typo("body-tiny", "regular");
+    margin-bottom: 0;
+    color: var(--color-dove-gray-100);
+    max-width: 180px;
+    white-space: break-spaces;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: center;
+  }
+}

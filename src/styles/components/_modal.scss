@@ -1,0 +1,252 @@
+.ant-modal {
+  $root: &;
+  border-radius: 8px;
+
+  &-mask,
+  &-wrap {
+    overflow: hidden;
+    z-index: 1002;
+  }
+
+  &__sub-description {
+    @include typo("body", "regular");
+    margin-bottom: 0;
+  }
+
+  &__confirm-message {
+    @include typo("body", "regular");
+    color: var(--color-tundora-100);
+  }
+
+  &-content {
+    padding: 8px !important;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    border: none;
+    padding: 0 16px 16px;
+  }
+
+  &--confirm {
+    button {
+      margin-left: 0 !important;
+    }
+  }
+
+  &-wrapper:not(#{$root}--confirm) {
+    #{$root}-footer {
+      display: none;
+    }
+  }
+
+  &--fullscreen {
+    overflow: hidden;
+    max-width: 100vw;
+    width: 100vw !important;
+    border-radius: 0;
+
+    #{$root}__copyright {
+      @include typo("body", "regular");
+      color: var(--color-dove-gray-100);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      #{$root}__logo {
+        span {
+          @include typo("body", "bold");
+          margin-left: 4px;
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    #{$root}-close {
+      display: none;
+    }
+
+    #{$root}-body {
+      height: 100%;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #{$root}-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px 0 0;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      #{$root}-title {
+        @include typo("body", "semi-bold");
+        color: var(--color-white);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+
+    #{$root}-content {
+      height: 100vh;
+      border-radius: 0;
+    }
+
+    .table-layout {
+      &__toolbar,
+      &__filter {
+        padding-right: 16px;
+      }
+    }
+  }
+
+  &-body {
+    padding: 4px 16px 16px;
+
+    .ant-picker-range {
+      &__wrapper {
+        background-color: var(--color-white);
+      }
+    }
+
+    .ant-form-item {
+      .ant-select-multiple {
+        .ant-select-selector {
+          height: 32px;
+        }
+      }
+    }
+  }
+
+  &-content {
+    border-radius: 8px;
+  }
+
+  &-header {
+    padding: 16px 16px 0;
+    border: none;
+    border-radius: 8px 8px 0 0;
+
+    #{$root}-title {
+      @include typo("body-large", "semi-bold");
+    }
+  }
+
+  &__loading {
+    height: 72px;
+    position: relative;
+  }
+
+  &__description {
+    @include typo("body", "regular");
+    margin: 0;
+  }
+
+  &__description-list {
+    @include typo("body", "regular");
+
+    p,
+    ul {
+      margin: 0;
+      font-style: italic;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  }
+
+  &__text {
+    @include typo("body", "regular");
+    color: var(--color-tundora-100);
+  }
+
+  &__clone-description {
+    @include typo("body", "regular");
+    color: var(--color-tundora-100);
+    font-style: italic;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+
+    &-content {
+      @include typo("body", "medium");
+      display: flex;
+      gap: 4px;
+      align-items: center;
+
+      &--success {
+        color: var(--color-tropical-rain-forest);
+      }
+
+      &--danger {
+        color: var(--color-thunderbird);
+      }
+
+      .detail-panel {
+        &__property-icon {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+  }
+
+  &__label {
+    @include typo("body", "medium");
+    color: var(--color-mine-shaft);
+    margin: 0;
+  }
+
+  &__skeleton {
+    margin-bottom: 25px;
+    border-radius: 4px;
+  }
+
+  &__skeleton-title {
+    height: 10px !important;
+    width: 100% !important;
+    margin-bottom: 10px;
+    padding: 0 4px;
+  }
+
+  &__skeleton-content {
+    width: 100% !important;
+    padding: 0 4px;
+    border-radius: 4px;
+
+    &.ant-skeleton-input-lg {
+      height: 88px;
+    }
+  }
+
+  &__template-text {
+    @include typo("body", "medium");
+    display: flex;
+    width: 100%;
+    gap: 8px;
+
+    label {
+      @include typo("body", "medium");
+      color: var(--color-tundora-100);
+    }
+
+    span {
+      color: var(--color-science-blue);
+      cursor: pointer;
+    }
+  }
+}

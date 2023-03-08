@@ -1,0 +1,30 @@
+@media (max-width: 992px) {
+  .banner {
+    &__info {
+      padding: 16px;
+      bottom: -50px;
+    }
+
+    &__info-wrapper {
+      margin: 0 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  //
+}
+
+@media (max-width: 500px) {
+  .banner {
+    &__info {
+      flex-direction: column;
+      bottom: 0;
+      position: relative;
+    }
+
+    &__info-wrapper {
+      margin: 0;
+    }
+  }
+}

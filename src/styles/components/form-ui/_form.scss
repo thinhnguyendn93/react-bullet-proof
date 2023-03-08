@@ -1,0 +1,82 @@
+.ant-form {
+  $root: &;
+
+  &-vertical {
+    #{$root}-item-label {
+      padding-bottom: 4px;
+    }
+  }
+
+  &__footer {
+    margin-top: 24px;
+  }
+
+  &-item {
+    width: 100%;
+    margin-bottom: 0;
+
+    .ant-form-item-explain-error {
+      color: var(--color-thunderbird);
+    }
+
+    #{$root}-item-label {
+      label {
+        @include typo("body", "medium");
+        color: var(--color-mine-shaft);
+      }
+
+      #{$root}-item-required {
+        &:before {
+          content: none !important;
+        }
+
+        &:after {
+          display: inline-block;
+          margin-left: 4px;
+          color: var(--color-thunderbird);
+          font-size: 14px;
+          line-height: 1;
+          content: "*";
+        }
+      }
+    }
+
+    #{$root}-item-control-input {
+      min-height: 20px;
+    }
+  }
+
+  &-item-row {
+    #{$root}-item-label {
+      label {
+        @include typo("body", "medium");
+        color: var(--color-mine-shaft);
+      }
+
+      #{$root}-item-required {
+        &:before {
+          content: none !important;
+        }
+
+        &:after {
+          display: inline-block;
+          margin-left: 4px;
+          color: var(--color-thunderbird);
+          font-size: 14px;
+          line-height: 1;
+          content: "*";
+        }
+      }
+    }
+  }
+
+  &__label {
+    @include typo("body", "medium");
+    color: var(--color-mine-shaft);
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+  }
+}

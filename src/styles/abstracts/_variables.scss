@@ -1,0 +1,290 @@
+$asset-base-path: "../../../assets" !default;
+
+$button-type: (
+  "default": (
+    "color": var(--color-black-pearl),
+    "border": none,
+    "background-color": var(--color-white),
+    "hover": (
+      "color": var(--color-endeavour),
+      "background-color": var(--color-white),
+      "border": none,
+    ),
+    "pressed": (
+      "color": var(--color-congress-blue),
+      "border": 1px solid var(--color-congress-blue),
+    ),
+    "disabled": (
+      "opacity": 0.3,
+      "background-color": var(--color-white),
+      "color": var(--color-black),
+      "hover": (
+        "opacity": 0.3,
+        "background-color": var(--color-white),
+      ),
+    ),
+    "circle": (
+      "color": var(--color-tundora-100),
+      "border": none,
+      "background-color": var(--color-white),
+      "hover": (
+        "color": var(--color-endeavour),
+        "border": none,
+        "background-color": var(--color-white),
+      ),
+      "pressed": (
+        "color": var(--color-congress-blue),
+        "border": none,
+        "background-color": var(--color-white),
+      ),
+      "disabled": (
+        "color": var(--color-bombay),
+        "hover": (
+          "background-color": var(--color-iron),
+        ),
+      ),
+    ),
+    "danger": (
+      "color": var(--color-thunderbird),
+      "border": 1px solid var(--color-thunderbird),
+      "hover": (
+        "color": var(--color-bright-red),
+        "border": 1px solid var(--color-bright-red),
+      ),
+      "pressed": (
+        "color": var(--color-red-berry),
+        "border": 1px solid var(--color-red-berry),
+      ),
+      "disabled": (
+        "color": var(--color-thunderbird-100),
+        "border": 1px solid var(--color-thunderbird-100),
+        "hover": (
+          "color": var(--color-thunderbird-100),
+          "border": 1px solid var(--color-thunderbird-100),
+        ),
+      ),
+    ),
+    "success": (
+      "color": var(--color-tropical-rain-forest),
+      "border": 1px solid var(--color-tropical-rain-forest),
+      "hover": (
+        "color": var(--color-cadmium-green),
+        "border": 1px solid var(--color-cadmium-green),
+      ),
+      "pressed": (
+        "color": var(--color-kaitoke-green),
+        "border": 1px solid var(--color-kaitoke-green),
+      ),
+    ),
+  ),
+  "primary": (
+    "color": var(--color-white),
+    "border": 1px solid var(--color-malibu),
+    "background-color": var(--color-true-blue),
+    "hover": (
+      "background-color": var(--color-endeavour),
+    ),
+    "pressed": (
+      "background-color": var(--color-congress-blue),
+    ),
+    "disabled": (
+      "color": var(--color-white),
+      "border": none,
+      "background-color": var(--color-white-400),
+      "hover": (
+        "color": var(--color-white),
+        "border": none,
+        "background-color": var(--color-science-blue-100),
+      ),
+    ),
+    "danger": (
+      "background-color": var(--color-salmon),
+      "disabled": (
+        "background-color": var(--color-thunderbird-100),
+        "hover": (
+          "background-color": var(--color-thunderbird-100),
+        ),
+      ),
+      "hover": (
+        "background-color": var(--color-bright-red),
+      ),
+      "pressed": (
+        "background-color": var(--color-red-berry),
+      ),
+    ),
+  ),
+  "link": (
+    "color": var(--color-science-blue),
+    "border": 1px solid var(--color-alto),
+    "background-color": var(--color-white),
+    "hover": (
+      "color": var(--color-mine-shaft),
+      "border": 1px solid var(--color-alto),
+      "background-color": var(--color-white),
+    ),
+    "pressed": (
+      "color": var(--color-black),
+      "border": 1px solid var(--color-alto),
+      "background-color": var(--color-white),
+    ),
+    "disabled": (
+      "color": var(--color-black-200),
+      "border": 1px solid var(--color-alto-100),
+      "hover": (
+        "color": var(--color-black-200),
+        "border": 1px solid var(--color-alto-100),
+      ),
+    ),
+    "danger": (
+      "color": var(--color-thunderbird),
+      "border": 1px solid var(--color-thunderbird),
+      "hover": (
+        "color": var(--color-bright-red),
+        "border": 1px solid var(--color-bright-red),
+      ),
+      "pressed": (
+        "color": var(--color-red-berry),
+        "border": 1px solid var(--color-red-berry),
+      ),
+      "disabled": (
+        "color": var(--color-thunderbird-100),
+        "border": 1px solid var(--color-thunderbird-100),
+        "hover": (
+          "color": var(--color-thunderbird-100),
+          "border": 1px solid var(--color-thunderbird-100),
+        ),
+      ),
+    ),
+  ),
+  "text": (
+    "border": none,
+    "color": var(--color-white),
+    "background": none,
+    "background-color": transparent,
+    "hover": (
+      "color": var(--color-endeavour),
+      "border": none,
+      "background-color": transparent,
+    ),
+    "pressed": (
+      "background-color": transparent,
+      "color": var(--color-congress-blue),
+    ),
+    "disabled": (
+      "color": var(--color-science-blue-100),
+      "hover": (
+        "color": var(--color-science-blue-100),
+      ),
+    ),
+    "danger": (
+      "color": var(--color-thunderbird),
+      "border": none,
+      "hover": (
+        "color": var(--color-bright-red),
+        "border": none,
+      ),
+      "pressed": (
+        "color": var(--color-red-berry),
+        "border": none,
+      ),
+      "disabled": (
+        "color": var(--color-thunderbird-100),
+        "border": none,
+        "hover": (
+          "color": var(--color-thunderbird-100),
+          "border": none,
+        ),
+      ),
+    ),
+  ),
+  "ghost": (
+    "color": var(--color-dodger-blue),
+    "border": 1px solid var(--color-dodger-blue),
+    "background-color": transparent,
+    "opacity": 0.3,
+    "hover": (
+      "color": var(--color-white),
+      "border": 1px solid var(--color-white),
+    ),
+    "pressed": (
+      "color": var(--color-congress-blue),
+      "border": 1px solid var(--color-congress-blue),
+    ),
+    "disabled": (
+      "color": var(--color-dodger-blue-100),
+      "border": 1px solid var(--color-dodger-blue-100),
+      "background-color": var(--color-white),
+      "hover": (
+        "color": var(--color-dodger-blue-100),
+        "border": 1px solid var(--color-dodger-blue-100),
+        "background-color": var(--color-white),
+      ),
+    ),
+  ),
+);
+
+$dropdown-padding-size: (
+  "default": (
+    "padding": 5px 12px,
+  ),
+  "large": (
+    "padding": 9px 16px,
+  ),
+  "small": (
+    "padding": 3px 8px,
+  ),
+);
+
+$dropdown-padding-size: (
+  "default": (
+    "padding": 4px 12px,
+  ),
+  "large": (
+    "padding": 10px 16px,
+  ),
+  "small": (
+    "padding": 1px 8px,
+  ),
+);
+
+$select-position: (
+  "default": (
+    "left": 8px,
+    "top": 4px,
+  ),
+  "large": (
+    "left": 16px,
+    "top": 8px,
+  ),
+  "small": (
+    "left": 8px,
+    "top": 1px,
+  ),
+);
+
+$notification-type: (
+  "error": (
+    "icon": "danger-circle",
+    "color": var(--color-carnation),
+    "background-color": var(--color-sauvignon),
+    "border-color": var(--color-your-pink-200),
+  ),
+  "warning": (
+    "icon": "warning-circle",
+    "color": var(--color-pirate-gold),
+    "background-color": var(--color-quarter-pearl-lusta),
+    "border-color": var(--color-school-bus-yellow),
+  ),
+  "success": (
+    "icon": "success-circle",
+    "color": var(--color-mountain-meadow-100),
+    "background-color": var(--color-feta),
+    "border-color": var(--color-riptide-100),
+  ),
+  "info": (
+    "icon": "info-circle",
+    "color": var(--color-dodger-blue-200),
+    "background-color": var(--color-alice-blue),
+    "border-color": var(--color-french-pass),
+  ),
+);

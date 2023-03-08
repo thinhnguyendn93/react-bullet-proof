@@ -1,0 +1,69 @@
+$typographies: (
+  "display": (
+    "font-size": 52px,
+    "line-height": 56px,
+  ),
+  "display-small": (
+    "font-size": 44px,
+    "line-height": 48px,
+  ),
+  "heading1": (
+    "font-size": 40px,
+    "line-height": 48px,
+  ),
+  "heading2": (
+    "font-size": 36px,
+    "line-height": 44px,
+  ),
+  "heading3": (
+    "font-size": 32px,
+    "line-height": 40px,
+  ),
+  "heading4": (
+    "font-size": 28px,
+    "line-height": 36px,
+  ),
+  "heading5": (
+    "font-size": 24px,
+    "line-height": 32px,
+  ),
+  "heading6": (
+    "font-size": 20px,
+    "line-height": 24px,
+  ),
+  "header": (
+    "font-size": 18px,
+    "line-height": 28px,
+  ),
+  "body-large": (
+    "font-size": 14px,
+    "line-height": 24px,
+  ),
+  "body": (
+    "font-size": 12px,
+    "line-height": 20px,
+  ),
+);
+
+$weights: (
+  "regular": (
+    "font-weight": 400,
+  ),
+  "medium": (
+    "font-weight": 500,
+  ),
+  "semi-bold": (
+    "font-weight": 600,
+  ),
+  "bold": (
+    "font-weight": 700,
+  ),
+);
+
+@mixin typo($typography, $weight) {
+  $typo: map-get($typographies, $typography);
+  $fontWeight: map-get($weights, $weight);
+  font-size: map-get($typo, "font-size");
+  line-height: map-get($typo, "line-height");
+  font-weight: map-get($fontWeight, "font-weight");
+}

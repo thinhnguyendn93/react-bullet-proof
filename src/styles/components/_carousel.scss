@@ -1,0 +1,15 @@
+.ant-carousel {
+  max-width: 100%;
+
+  .slick-dots li {
+    &.slick-active {
+      button {
+        background: var(--color-science-blue) !important;
+      }
+    }
+
+    button {
+      background: var(--color-black) !important;
+    }
+  }
+}

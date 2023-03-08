@@ -1,0 +1,48 @@
+.switch-toggle {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+
+  .ant-switch {
+    width: 20px;
+    height: 12px;
+    min-width: 20px;
+    border-radius: 6px;
+    background: var(--color-alto);
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    --antd-wave-shadow-color: none;
+  }
+
+  .ant-switch-handle {
+    width: 8px;
+    height: 8px;
+  }
+
+  .ant-switch-checked {
+    background: var(--color-science-blue);
+
+    .ant-switch-handle {
+      left: calc(100% - 10px);
+    }
+  }
+
+  .ant-form-item {
+    width: fit-content;
+  }
+
+  .ant-form-item-control-input-content {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+  }
+
+  &__description {
+    @include typo("body", "regular");
+    color: var(--color-mine-shaft);
+    width: 100%;
+  }
+}

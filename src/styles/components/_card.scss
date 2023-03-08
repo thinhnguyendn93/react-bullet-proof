@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+
+  &__image {
+    border-radius: 16px 16px 0px 0px;
+    width: 100%;
+  }
+
+  &__title {
+    @include typo("heading6", "semi-bold");
+    margin: 16px 0;
+  }
+
+  &__description {
+    @include typo("body-large", "regular");
+    color: var(--color-tundora-200);
+    margin: 0;
+
+    ul {
+      padding: 0 20px;
+      margin: 0;
+    }
+  }
+
+  &__tags {
+    margin-top: 16px;
+
+    .ant-tag {
+      border-radius: 16px;
+      padding: 4px 8px;
+    }
+  }
+
+  &--border {
+    padding: 16px;
+    border: 1px solid var(--color-alto);
+    border-radius: 16px;
+  }
+}

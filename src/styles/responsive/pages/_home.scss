@@ -1,0 +1,36 @@
+@media (max-width: 992px) {
+  .home-page {
+    $root: &;
+
+    &__headline {
+      justify-content: center;
+      gap: 32px;
+
+      #{$root}__sub-header,
+      #{$root}__headline-text {
+        text-align: center;
+        padding: 0;
+      }
+    }
+
+    &__headline-block {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .app-header {
+    padding: 0 16px;
+  }
+
+  .home-page {
+    &__section {
+      padding: 52px 16px;
+    }
+
+    &__footer {
+      padding: 16px;
+    }
+  }
+}

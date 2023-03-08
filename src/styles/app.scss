@@ -1,0 +1,115 @@
+@import "mixins/background";
+@import "mixins/text-ellipsis";
+@import "mixins/components/button";
+@import "mixins/components/dropdown";
+@import "mixins/components/select";
+@import "mixins/font";
+@import "base/general";
+@import "base/fonts";
+@import "abstracts/variables";
+@import "abstracts/colors";
+@import "abstracts/functions";
+@import "abstracts/typography";
+@import "abstracts/icons";
+@import "components/logo";
+@import "components/card";
+@import "components/carousel";
+@import "components/form-ui/form";
+@import "components/form-ui/input";
+@import "components/form-ui/checkbox";
+@import "components/form-ui/button";
+@import "components/form-ui/select";
+@import "components/form-ui/upload";
+@import "components/form-ui/switch-toggle";
+@import "components/form-ui/input-number";
+@import "components/form-ui/radio";
+@import "components/form-ui/days-checkbox";
+@import "components/font-icon";
+@import "components/loading";
+@import "components/layout";
+@import "components/popover";
+@import "components/segmented";
+@import "components/modal";
+@import "components/notification";
+@import "components/split-layout";
+@import "components/scroll-container";
+@import "pages/guest-page";
+@import "responsive/components/banner";
+@import "responsive/components/layout";
+@import "responsive/pages/home";
+
+:root {
+  font-size: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  position: fixed;
+  height: 100%;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin-bottom: 64px;
+}
+
+h2 {
+  margin-bottom: 32px;
+}
+
+h3 {
+  margin-bottom: 24px;
+}
+
+h4 {
+  margin-bottom: 16px;
+}
+
+h5 {
+  margin-bottom: 8px;
+}
+
+h6 {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ant-row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  &-center {
+    h2 {
+      text-align: center;
+    }
+  }
+}

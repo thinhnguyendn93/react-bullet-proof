@@ -1,0 +1,4 @@
+@mixin dropdown-padding-size($size) {
+  $padding: map-get($dropdown-padding-size, $size);
+  padding: map-get($padding, "padding");
+}

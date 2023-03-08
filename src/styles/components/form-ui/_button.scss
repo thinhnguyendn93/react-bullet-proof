@@ -1,0 +1,101 @@
+.ant-btn {
+  $root: &;
+
+  @include typo("body", "regular");
+  border-radius: 6px;
+  padding: 6px 12px;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  & > .ant-btn-loading-icon .anticon svg {
+    animation-duration: 0.75s;
+  }
+
+  &--large {
+    @include typo("body-large", "regular");
+    padding: 6px 12px;
+    height: 40px;
+
+    &#{$root}--circle {
+      @include typo("body", "regular");
+      width: 38px;
+      height: 38px;
+    }
+  }
+
+  &--medium {
+    @include typo("body", "medium");
+  }
+
+  &--small {
+    @include typo("body", "medium");
+    padding: 4px 8px;
+    gap: 6px;
+    height: 28px;
+
+    &#{$root}--circle {
+      @include typo("body", "semi-bold");
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  @each $type, $type-map in $button-type {
+    @if $type == "ghost" {
+      &-#{$type} {
+        color: map-get($type-map, "color") !important;
+        border: map-get($type-map, "border") !important;
+        background-color: map-get($type-map, "background-color") !important;
+
+        &:disabled {
+          opacity: map-get($type-map, "opacity");
+        }
+      }
+    }
+
+    @if $type != "ghost" {
+      &-#{$type} {
+        @include button-type($type-map, $root);
+      }
+    }
+  }
+
+  &-link {
+    &#{$root}--large,
+    &#{$root}--small {
+      border: 1px solid var(--color-alto);
+    }
+  }
+
+  &-text {
+    &#{$root}--large,
+    &#{$root}--small {
+      border: none;
+    }
+  }
+
+  &--outline {
+    border: 1px solid var(--color-iron);
+  }
+
+  &--circle {
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  &--empty-prefix-icon {
+    gap: 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}

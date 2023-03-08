@@ -1,0 +1,36 @@
+{
+  "customSyntax": "postcss-scss",
+  "extends": ["stylelint-config-standard", "stylelint-config-recommended"],
+  "plugins": ["stylelint-scss"],
+  "rules": {
+    "selector-pseudo-element-colon-notation": "single",
+    "color-function-notation": "legacy",
+    "number-leading-zero": "always",
+    "font-family-no-missing-generic-family-keyword": null,
+    "declaration-empty-line-before": "never",
+    "max-line-length": 160,
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": ["font-url", "quote", "map-get", "resolve"]
+      }
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "use",
+          "mixin",
+          "include",
+          "function",
+          "return",
+          "if",
+          "extend",
+          "at-root",
+          "for",
+          "each"
+        ]
+      }
+    ]
+  }
+}

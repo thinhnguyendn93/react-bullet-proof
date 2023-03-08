@@ -1,0 +1,150 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier", "unused-imports"],
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended"
+  ],
+  "globals": {
+    "window": true,
+    "document": true,
+    "describe": true,
+    "test": true,
+    "expect": true,
+    "navigator": true,
+    "API_URL": true,
+    "APP_URL": true,
+    "AUTH_API_URL": true,
+    "NODE_ENV": true,
+    "SERVICE_WORKER_PWA": true,
+    "SOCKET_URL": true,
+    "PORT": true,
+    "$": true,
+    "localStorage": true,
+    "sessionStorage": true,
+    "Blob": true,
+    "Image": true,
+    "process": true,
+    "__dirname": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  },
+  "rules": {
+    "no-console": ["error", { "allow": ["error"] }],
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ],
+    "@typescript-eslint/no-inferrable-types": [
+      2,
+      {
+        "ignoreParameters": true,
+        "ignoreProperties": true
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "all",
+        "endOfLine": "auto"
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["virtual:pwa-register"]
+      }
+    ],
+    "max-lines": [
+      2,
+      {
+        // specify the max number of lines in a file
+        "max": 300,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ],
+    "max-lines-per-function": [
+      2,
+      {
+        // enforce a maximum function length
+        "max": 300,
+        "skipBlankLines": true,
+        "skipComments": true,
+        "IIFEs": true
+      }
+    ],
+    "max-params": [2, 3],
+    "max-depth": [2, 4],
+    "max-statements": [2, 20],
+    "max-statements-per-line": [2, { "max": 1 }],
+    "quote-props": [0, "always"],
+    "import/named": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "index",
+          "sibling",
+          "parent",
+          "object",
+          "type"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.spec.ts"],
+      "rules": {
+        "max-lines-per-function": "off"
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strictNullChecks": false,
+    "isolatedModules": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false,
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "./",
+    "paths": {
+      "i18n/*": ["i18n/*"],
+      "containers/*": ["src/containers/*"],
+      "enums/*": ["src/enums/*"],
+      "types/*": ["src/types/*"],
+      "routers/*": ["src/routers/*"],
+      "store/*": ["src/store/*"],
+      "assets/*": ["src/assets/*"],
+      "actions/*": ["src/actions/*"],
+      "styles/*": ["src/styles/*"],
+      "config/*": ["src/config/*"],
+      "components/*": ["src/components/*"],
+      "api/*": ["src/api/*"],
+      "pages/*": ["src/pages/*"],
+      "utils/*": ["src/utils/*"],
+      "mixins/*": ["src/mixins/*"],
+      "windows/*": ["src/windows/*"],
+      "layouts/*": ["src/components/layouts/*"],
+      "models/*": ["src/models/*"],
+      "styled/*": ["src/styled/*"],
+      "modals/*": ["src/modals/*"],
+      "hooks/*": ["src/hooks/*"],
+      "contexts/*": ["src/contexts/*"]
+    },
+    "typeRoots": ["./node_modules/@types"],
+    "lib": ["es5", "es6", "dom", "dom.iterable"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}

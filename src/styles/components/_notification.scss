@@ -1,0 +1,108 @@
+.ant-notification-notice {
+  $root: &;
+  padding: 0;
+  border: 1px solid;
+  border-radius: 8px;
+
+  &--progress {
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-white) !important;
+    box-shadow: 2px 0 4px var(--color-black-transparent-100);
+
+    #{$root}-with-icon {
+      display: flex;
+      align-items: center;
+
+      #{$root}-icon {
+        display: flex;
+        position: unset !important;
+        transform: none !important;
+        background-color: transparent !important;
+
+        &:after {
+          content: none !important;
+        }
+      }
+    }
+  }
+
+  &-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  &-with-icon {
+    #{$root}-message {
+      @include typo("body", "semi-bold");
+      color: var(--color-tundora-100);
+      margin-left: 40px;
+    }
+
+    #{$root}-description {
+      @include typo("body", "regular");
+      margin-left: 40px;
+    }
+  }
+
+  &-close-x {
+    &:after {
+      @include font-icon("close");
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  @each $notification, $type-map in $notification-type {
+    &#{$root}-#{$notification} {
+      padding: 10px 16px;
+      border-color: map-get($type-map, "border-color");
+
+      #{$root}-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:after {
+          @include font-icon(map-get($type-map, "icon"), 20px);
+          border-radius: 50%;
+          color: var(--color-white);
+        }
+      }
+    }
+  }
+}
+
+.ant-message {
+  bottom: 0;
+  top: auto !important;
+
+  &-custom-content {
+    display: flex;
+    align-items: center;
+
+    .anticon {
+      margin-bottom: 4px;
+    }
+  }
+
+  &-notice-content {
+    padding: 4px 12px;
+    border-radius: 8px;
+
+    .font-icon {
+      margin-right: 4px;
+    }
+
+    span:not(.font-icon) {
+      @include typo("body", "regular");
+    }
+  }
+}

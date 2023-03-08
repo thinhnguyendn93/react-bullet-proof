@@ -1,0 +1,81 @@
+.font-icon {
+  font-family: font-icons !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 16px;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @each $name, $value in $icons {
+    &--#{$name}:before {
+      content: $value;
+    }
+  }
+
+  @each $color, $value in $colors {
+    &--#{$color} {
+      color: $value;
+    }
+
+    &--background-#{$color} {
+      background-color: $value;
+    }
+  }
+
+  &--cursor {
+    cursor: pointer;
+  }
+
+  &--size-64 {
+    font-size: 64px !important;
+  }
+
+  &--size-24 {
+    font-size: 24px !important;
+  }
+
+  &--size-32 {
+    font-size: 32px !important;
+  }
+
+  &--size-40 {
+    font-size: 40px !important;
+  }
+
+  &--size-22 {
+    font-size: 22px !important;
+  }
+
+  &--size-20 {
+    font-size: 20px !important;
+  }
+
+  &--size-16 {
+    font-size: 16px !important;
+  }
+
+  &--size-12 {
+    font-size: 12px !important;
+  }
+
+  &--size-10 {
+    font-size: 10px !important;
+  }
+
+  &--size-8 {
+    font-size: 8px !important;
+  }
+
+  &--size-6 {
+    font-size: 6px;
+  }
+
+  &--size-4 {
+    font-size: 4px;
+  }
+}

@@ -1,0 +1,45 @@
+.ant-radio {
+  $root: &;
+  top: 0;
+
+  &-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+
+    .font-icon {
+      margin-right: 4px;
+    }
+  }
+
+  &-group {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+  }
+
+  #{$root}-inner {
+    border-color: var(--color-science-blue);
+  }
+
+  &-checked {
+    #{$root}-inner {
+      background-color: var(--color-congress-blue);
+      border-color: var(--color-congress-blue);
+
+      &:after {
+        background-color: var(--color-white);
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    font-size: 12px;
+  }
+}
