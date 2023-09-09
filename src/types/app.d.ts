@@ -19,4 +19,10 @@ declare namespace App {
   };
 
   export type Data = any;
+
+  export type TablePaginate = {
+    current?: number;
+    pageSize?: number;
+    total?: number;
+  };
 }
