@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { Modal as AntModal } from 'antd';
-import { PropsWithChildren, useCallback, useEffect, useState } from 'react';
+import { PropsWithChildren, useEffect, useMemo, useState } from 'react';
 import { FontIcon } from 'components/font-icon';
 
 interface Props {
@@ -45,7 +45,7 @@ export function ModalLayout(props: PropsWithChildren<Props>) {
     [`ant-modal--fullscreen`]: fullScreen,
   });
 
-  const getSize = useCallback(() => {
+  const modalSize = useMemo(() => {
     if (size == 'large') {
       return 800;
     }
@@ -67,7 +67,7 @@ export function ModalLayout(props: PropsWithChildren<Props>) {
       closable={closable}
       maskClosable={maskClosable}
       footer={footer || []}
-      width={getSize()}
+      width={modalSize}
       onCancel={onClose}
       afterClose={afterClose}
       closeIcon={<FontIcon name="close" size={24} />}
